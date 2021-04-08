@@ -1,13 +1,11 @@
-import pifacedigitalio
+import pifacedigitalio #lib pour la carte de relais
 import sys
-import multitasking
-
 
 pfd= pifacedigitalio.PiFaceDigital()
 
 in1 = sys.stdin
 
-
+#fonctions de déclanchement des relais
 def actmoteurconv (event):
     event.chip.relays[0].toggle()
     if pfd.output_pins[0].value == 1 :
@@ -24,6 +22,9 @@ def actmoteurvibr ():
     elif pfd.output_pins[1].value == 0:
         print('rl2off')
 
+def checkstatus ():
+    print ('relay1' + pfd.output_pins[0].value)
+    print ('relay2' + pfd.output_pins[1].value)
 
 
 #listener = pifacedigitalio.InputEventListener(chip=pfd) # system interupt
@@ -32,14 +33,17 @@ def actmoteurvibr ():
 
 #listener.activate()
 
-for line in in1 :
-    if 'q' == line.rstrip():
-        break
-    if 'moteurconv' == line.rstrip():
-        actmoteurconv()
-    elif 'moteurvibr' == line.rstrip():
-        actmoteurvibr()
 
+if __name__ == '__main__':
+    for line in in1 :
+        if 'q' == line.rstrip():
+            break
+        if 'moteurconv' == line.rstrip():
+            actmoteurconv()
+        elif 'moteurvibr' == line.rstrip():
+            actmoteurvibr()
+        if 'refresh' == line.rstrip():
+            checkstatus()
 
 #while (1==1):
 #

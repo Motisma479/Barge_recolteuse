@@ -12,7 +12,7 @@ yt=0
 camera = PiCamera()
 #camera.resolution = (2048,1024)
 camera.rotation = 180
-camera.start_preview(fullscreen = False, window = (0, 0, 640, 480))
+# camera.start_preview(fullscreen = False, window = (0, 0, 640, 480))
 while True :
     sleep(5)
     camera.capture("../final/capture.png")
