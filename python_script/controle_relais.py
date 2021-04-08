@@ -7,7 +7,7 @@ in1 = sys.stdin
 
 #fonctions de déclanchement des relais
 def actmoteurconv ():
-    event.chip.relays[0].toggle()
+    pfd.relays[0].toggle()
 
 def actmoteurvibr ():
     pfd.relays[1].toggle()
