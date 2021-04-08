@@ -6,21 +6,12 @@ pfd= pifacedigitalio.PiFaceDigital()
 in1 = sys.stdin
 
 #fonctions de déclanchement des relais
-def actmoteurconv (event):
+def actmoteurconv ():
     event.chip.relays[0].toggle()
-    if pfd.output_pins[0].value == 1 :
-        print('rl1on')
-    elif pfd.output_pins[0].value == 0 :
-        print('rl1off')
-
-
 
 def actmoteurvibr ():
     pfd.relays[1].toggle()
-    if pfd.output_pins[1].value == 1 :
-        print('rl2on')
-    elif pfd.output_pins[1].value == 0:
-        print('rl2off')
+
 
 def checkstatus ():
     print ('relay1' + str(pfd.output_pins[0].value))
