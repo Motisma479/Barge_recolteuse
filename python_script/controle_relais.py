@@ -23,8 +23,8 @@ def actmoteurvibr ():
         print('rl2off')
 
 def checkstatus ():
-    print ('relay1' + string(pfd.output_pins[0].value))
-    print ('relay2' + string(pfd.output_pins[1].value))
+    print ('relay1' + str(pfd.output_pins[0].value))
+    print ('relay2' + str(pfd.output_pins[1].value))
 
 #listener = pifacedigitalio.InputEventListener(chip=pfd) # system interupt
 
