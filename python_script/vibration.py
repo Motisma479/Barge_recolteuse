@@ -20,8 +20,10 @@ while True : #boucle principale
         if pfd.output_pins[1].value == 1:
             motvibroff()
             time.sleep(1)
+            print("turning motor off")
         else :
             time.sleep(1)
+            print("moteur off")
 
         if in1.read() =='Benne_pleine' :
             break
@@ -31,9 +33,12 @@ while True : #boucle principale
         if pfd.output_pins[1].value == 0:
             motvibron()
             time.sleep(1)
+            print("turnin motor on")
         else :
             time.sleep(1)
+            print("moteur on")
         t2 = time.time()
+
         if t2 >= t + 30 :
             print('Benne_pleine')
 
