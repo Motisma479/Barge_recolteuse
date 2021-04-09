@@ -34,7 +34,7 @@ while True : #boucle principale
         else :
             time.sleep(1)
         t2 = time.time()
-        if t2 => t + 30 :
+        if t2 >= t + 30 :
             print('Benne_pleine')
 
         if in1.read() =='Benne_non_pleine' :
