@@ -1,6 +1,6 @@
 import pifacedigitalio
 from sys import stdin
-import Time
+import time
 #libairies
 
 pfd= pifacedigitalio.PiFaceDigital()
@@ -15,6 +15,6 @@ def checkstatus (): #fonction pour regarder l'état des relais
 while True : #boucle principale
     while line in in1 != 'refreshoff':
         checkstatus()
-        Time.sleep(1000) #délais de 1000ms
+        time.sleep(1) #délais de 1s
     while line in in1 != 'refreshon' :
-        Time.sleep(1000)
+        time.sleep(1)
