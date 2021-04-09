@@ -34,12 +34,3 @@ if __name__ == '__main__':
             actmoteurvibr()
         if 'refresh' == line.rstrip():
             checkstatus()
-
-#while (1==1):
-#
-#     if but1check() == 0 :
-#         pfd.relays[1].turn_on()
-#         print(bool(but1check()))
-#     else :
-#         pfd.relays[1].turn_off()
-#         print(bool(but1check()))

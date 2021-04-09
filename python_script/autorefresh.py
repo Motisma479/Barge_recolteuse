@@ -1,5 +1,5 @@
 import pifacedigitalio
-from sys import stdin
+import sys
 import time
 #libairies
 
