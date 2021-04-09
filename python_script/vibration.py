@@ -25,8 +25,11 @@ while True : #boucle principale
             time.sleep(1)
             print("moteur off")
 
-        if in1.read() =='Benne_pleine' :
+        if in1.readline() =='Benne_pleine' :
             break
+        else :
+            pass
+
 
     while True :
         t= time.time()
@@ -42,5 +45,7 @@ while True : #boucle principale
         if t2 >= t + 30 :
             print('Benne_pleine')
 
-        if in1.read() =='Benne_non_pleine' :
+        if in1.readline() =='Benne_non_pleine' :
             break
+        else :
+            pass
