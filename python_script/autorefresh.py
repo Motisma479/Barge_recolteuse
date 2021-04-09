@@ -13,8 +13,8 @@ def checkstatus (): #fonction pour regarder l'état des relais
 
 
 while True : #boucle principale
-    while line in in1 != 'refreshoff':
+    while in1 != 'refreshoff':
         checkstatus()
         time.sleep(1) #délais de 1s
-    while line in in1 != 'refreshon' :
+    while in1 != 'refreshon' :
         time.sleep(1)
