@@ -26,14 +26,15 @@ def  Scanparser():
                  
 
 while True : #boucle principale
-    if in1 == 'Start':
-        Start_Stop('Start')
-    elif in1 == 'Stop':
-        Start_Stop('Stop')
-    elif in1 == ('Scan'):
-        print(Scanparser())
-    elif in1 == 'setspeed':
-        setspeed(input('Vitesse de 0 a 10'))
+    for lines in in1.readline() :
+        if lines == 'Start':
+            Start_Stop('Start')
+        elif lines == 'Stop':
+            Start_Stop('Stop')
+        elif lines == ('Scan'):
+            print(Scanparser())
+        elif lines == 'setspeed':
+            setspeed(input('Vitesse de 0 a 10'))
         
 
 
