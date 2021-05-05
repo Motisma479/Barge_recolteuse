@@ -1,4 +1,7 @@
 from sweeppy import Sweep 
+import sys
+
+in1 = sys.stdin
 
 def setspeed(speed) :
     with Sweep("/dev/ttyUSB0") as sweep :
@@ -21,4 +24,17 @@ def  Scanparser():
         Scans = sweep.get_scans()
     return Scans
                  
-    
+
+while True : #boucle principale
+    if in1 == 'Start':
+        Start_Stop('Start')
+    elif in1 == 'Stop':
+        Start_Stop('Stop')
+    elif in1 == ('Scan'):
+        print(Scanparser())
+    elif in1 == 'setspeed':
+        setspeed(input('Vitesse de 0 a 10'))
+        
+
+
+
