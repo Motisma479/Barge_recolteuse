@@ -16,9 +16,9 @@ def Start_Stop (x):
               
     
 def  Scanparser():
-    Scans[]
+    Scans=[]
     with Sweep("/dev/ttyUSB0") as sweep :
         Scans = sweep.get_scans()
-        
+    return Scans
                  
     
