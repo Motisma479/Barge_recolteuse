@@ -19,10 +19,11 @@ def Start_Stop (x):
               
     
 def  Scanparser():
-    Scans=[]
-    with Sweep("/dev/ttyUSB0") as sweep :
-        Scans = sweep.get_scans()
-    return Scans
+    with Sweep('/dev/ttyUSB0') as sweep:
+    sweep.start_scanning()
+
+    for scan in sweep.get_scans():
+        print('{}\n'.format(scan))
                  
 
 while True : #boucle principale 
@@ -35,7 +36,7 @@ while True : #boucle principale
         elif line == ('Scan'):
             print(Scanparser())
         elif line == 'setspeed':
-            setspeed(input('Vitesse de 0 a 10'))
+            setspeed(int(input('Vitesse de 0 a 10')))
         
 
 
