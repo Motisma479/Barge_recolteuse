@@ -1,2 +1,2 @@
-Bujur
+Bujur.
 Guten Tag mein Freund.
