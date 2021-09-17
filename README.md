@@ -1,5 +1,2 @@
-Bujur.
-Guten Tag mein Freund bist du Kommunist ?.
-
-Rastevali yabloni y gruchi, vasily to mane na drekoy,
-RIKODIYAAA NAY SVEREG KATYUSHA
+#Barge Recolteuse de dechets  
+Projet de fin de terminal STI2D 2020/2021
